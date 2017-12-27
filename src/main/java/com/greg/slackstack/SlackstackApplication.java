@@ -1,5 +1,6 @@
 package com.greg.slackstack;
 
+import com.greg.slackstack.model.Item;
 import com.greg.slackstack.model.Wrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,6 +35,10 @@ public class SlackstackApplication {
             Wrapper wrapper = restTemplate.getForObject(
                     "http://api.stackexchange.com/2.2/questions/47914141?order=desc&sort=activity&site=stackoverflow", Wrapper.class);
             log.info(wrapper.toString());
+
+            Item item = new Item();
+            item = wrapper.getItem().get(0);
+            log.info("unwrapped " + item.toString());
         };
     }
 }

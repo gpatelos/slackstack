@@ -21,12 +21,11 @@ public class Item {
     @JsonProperty("score")
     public Integer score;
     @JsonProperty("question_id")
-    public Long questionId;
+    public Integer questionId;
     @JsonProperty("link")
     public String link;
     @JsonProperty("title")
     public String title;
-
 
     public Item() {
     }
@@ -79,11 +78,11 @@ public class Item {
         this.score = score;
     }
 
-    public Long getQuestionId() {
+    public Integer getQuestionId() {
         return questionId;
     }
 
-    public void setQuestionId(Long questionId) {
+    public void setQuestionId(Integer questionId) {
         this.questionId = questionId;
     }
 
@@ -105,13 +104,13 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item\nquestionId: " + questionId +
+        return "Item parsed to ->\nquestionId: " + questionId +
                 "\nisAnswered: " + isAnswered +
+                "\ntags: " + tags+
                 "\nowner: " + owner +
                 "\nscore: " + score +
                 "\nlink: " + link +
                 "\ntitle: " + title;
-
     }
 }
 
