@@ -42,6 +42,7 @@ public class FakeItemDao implements ItemDao {
         this.itemMap.remove(id);
     }
 
+
     @Override
     public void insertItemIntoDb(Item item) {
         itemMap.put(itemMap.size(),item);

@@ -11,6 +11,7 @@ import java.util.Collection;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class ItemController {
 
     @Autowired
